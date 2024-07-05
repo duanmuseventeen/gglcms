@@ -11,9 +11,9 @@ RoxygenNote: 7.3.1
 Imports: 
     ggimg,
     patchwork,
-    stringr
 Depends: 
     dplyr,
     ggplot2,
     R (>= 2.10)
+    stringr
 LazyData: true
