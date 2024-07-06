@@ -17,6 +17,7 @@ stat_disso2 <- function(ref, sample, ref.cutoff = 10, ppm = 10){
     lapply(ref$`m/z`, function(x){
       index <- which(abs((x - sample$`m/z`)) < (ppm * x / 1000000))
       if(length(index) == 0){index <- NA}
+      if(length(index) >  1){index <- which.min(abs((x - sample$`m/z`)))}
       return(index)
     }) %>% unlist]
   vsample[is.na(vsample)] <- 0
